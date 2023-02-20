@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--Basic User Info-->
+<ion-content>
+  <ion-list id="profileInfo">
+    <ion-item>
+        <ion-label>Name: </ion-label>
+        <ion-text>{{data.name}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Username: </ion-label>
+      <ion-text>{{data.username}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password: </ion-label>
+      <ion-text>{{data.password}}</ion-text>
+    </ion-item>
+  </ion-list>
+
+  <!--Songs per day-->
+  <ion-item id="songsPerDay">
+    <p class="question">How many songs a day do you listen to?</p>
+    <ion-item>
+      <ion-input inputmode="numeric" type="num" maxlength="2"></ion-input>
+    </ion-item>
+  </ion-item>
+  
+  <!--Birthday-->
+  <p class="question">What is your birthday?</p>
+  <ion-item>
+    <ion-datetime #datetime presentation="date" [value]="dateValue" size="cover" (ionChange)="dateChanged(datetime.value)"></ion-datetime>
+  </ion-item>
+  
+    <!--Display Date-->
+  <ion-item>
+    <ion-text id="birthdayString">{{ formattedString }}</ion-text>
+  </ion-item>
+
+  <!--Mood Chart-->
+  <p class="question">Mood Chart</p>
+  <img id="moodChart" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fprg0wq8bew431.png&f=1&nofb=1" alt="Mood Chart">
+
+  <!--Logout Button--> 
+  <ion-button class="logoutButton" routerLink="/sign-in" size="medium" shape="round">Logout</ion-button>
+
+</ion-content>

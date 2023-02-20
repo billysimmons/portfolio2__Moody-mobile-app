@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Moody</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h3>Sign In</h3>
+
+  <!--User Inputs-->
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="name" name="firstname" type="text" placeholder="Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="username" name="username" type="text" placeholder="Username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="password" name="password" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <!--Stay Loggin in-->
+    <ion-item>
+      <ion-checkbox id="checkBox"></ion-checkbox>
+      <ion-label>Remain Logged in</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!--Log in button-->
+  <ion-button id="loginButton" (click)="signInClick()"routerLink="/tablinks" size="large" shape="round">Login</ion-button>
+</ion-content>

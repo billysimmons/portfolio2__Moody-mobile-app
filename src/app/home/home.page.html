@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Moody</ion-title>
+    <ion-button class="logoutButton" routerLink="/sign-in" size="small" shape="round">Logout</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4>Welcome to Moody:</h4>
+  <h2 id="usernameDisplay">{{username}}</h2>
+  <p>Select your mood:</p>
+  <ion-button class="moodButton" routerLink="/mood" size="large" shape="round">Happy</ion-button>
+  <ion-button class="moodButton" routerLink="/mood" size="large" shape="round">Sad</ion-button>
+  <ion-button class="moodButton" routerLink="/mood" size="large" shape="round">Dance</ion-button>
+  <ion-button class="moodButton" routerLink="/mood" size="large" shape="round">Chill</ion-button>
+
+  <h3 (click)="showModal()">About us</h3>
+
+
+</ion-content>
