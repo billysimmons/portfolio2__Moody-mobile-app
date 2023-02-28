@@ -1,3 +1,4 @@
 # Moody Mobile Application 
 
-Built using AngularJS, simplified version of the moody web applicaiton (src file included ONLY)
+DESCRIPTION: Simplified version of the moody web application, built in AngularJS (src file included ONLY)
+
